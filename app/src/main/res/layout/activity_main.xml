@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--协调者布局-->
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity"
+        android:id="@+id/coordinator">
+        <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:background="?colorPrimary"
+                android:id="@+id/toobar"/>
+<!--behavior 可以在布局中指定，也可以在java代码中指定-->
+    <TextView
+            android:id="@+id/main_text"
+            android:text="Hello World!"
+            android:layout_gravity="center"
+            app:layout_behavior="cn.edu.nuc.designdemo.MyBehavior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</android.support.design.widget.CoordinatorLayout>
